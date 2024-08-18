@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function Register() {
     const [email, setEmail] = useState('');
@@ -7,6 +9,8 @@ export default function Register() {
     const [emailValid, setEmailValid] = useState(false);
     const [pwValid, setPwValid] = useState(false);
     const [notAllow, setNotAllow] = useState(true);
+
+    const navigate = useNavigate();
 
     const handleEmail = (e) => {
         setEmail(e.target.value);
@@ -32,6 +36,7 @@ export default function Register() {
 
     const onClickConfirmButton = () => {
         alert('회원가입이 완료되었습니다.')
+        navigate('/');
     }
 
     useEffect( () => {
@@ -84,8 +89,14 @@ export default function Register() {
     
             <div className='buttonWrap'>
                 <button onClick={onClickConfirmButton} disabled={notAllow} className="bottomButton">
-                    가입하기
+                    가입
                 </button>
+            </div>
+            <hr nonshade/>
+            <div className='registerWrap'>
+                <div className='registerTitle'>
+                    계정이 있으신가요? <Link to="/">로그인하기</Link>
+                </div>
             </div>
         </div>
     );

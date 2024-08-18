@@ -99,13 +99,13 @@ export default function Login() {
             
             <div className='buttonWrap'>
                 <button onClick={onClickConfirmButton} disabled={notAllow} className="bottomButton">
-                    확인
+                    로그인
                 </button>
             </div>
             <hr nonshade/>
             <div className='registerWrap'>
                 <div className='registerTitle'>
-                    계정이 없으신가요? <Link to='./Register.jsx'>가입하기</Link>
+                    계정이 없으신가요? <Link to="/register">가입하기</Link>
                 </div>
             </div>
         </div>
