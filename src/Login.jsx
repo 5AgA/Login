@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const User = {
-    email: 'somsom@dongduk.com',
+    email: 'abc@naver.com',
     pw: 'System2000!!'
 }
 
@@ -55,9 +55,8 @@ export default function Login() {
     return (
         <div className="page">
             <div className='titleWrap'>
-                이메일과 비밀번호를
                 <br/>
-                입력해주세요
+                로그인
             </div>
             <div className="contentWrap">
                 <div className="inputTitle">이메일 주소</div>
